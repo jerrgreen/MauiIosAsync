@@ -1,0 +1,17 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios16.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TestForMaui
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+@_exported import TestForMaui
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @objc(TestClass) public class TestClass : ObjectiveC.NSObject {
+  @objc public func DebugLog(message: Swift.String) -> Swift.String
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc public func DebugLog2(message: Swift.String) async -> Swift.String
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}

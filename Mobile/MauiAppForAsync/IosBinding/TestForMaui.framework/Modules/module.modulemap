@@ -1,0 +1,11 @@
+framework module TestForMaui {
+  umbrella header "TestForMaui.h"
+
+  export *
+  module * { export * }
+}
+
+module TestForMaui.Swift {
+  header "TestForMaui-Swift.h"
+  requires objc
+}
